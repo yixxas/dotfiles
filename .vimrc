@@ -5,7 +5,6 @@ set number
 set ruler
 "
 inoremap <buffer> jj <Esc>
-"nnoremap <Space><Space> :w<CR>:!clear;python3 %<CR>
 autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python3' shellescape(@%, 1)<CR>
 autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 nnoremap <buffer> <Space>c :%w !pbcopy<CR>
