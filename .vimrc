@@ -1,16 +1,20 @@
-" vim config
+" Vim config
 syntax on
-set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
 set number
 set ruler
 set hidden
 "
 inoremap jj <Esc>
 autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python3' shellescape(@%, 1)<CR>
-autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ -std=c++17 '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 nnoremap <Space>c :%w !pbcopy<CR>
 
-
+" Add cpp template
+autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
 
 
 " Vim color file
