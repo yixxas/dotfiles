@@ -14,7 +14,16 @@ autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ -s
 nnoremap <Space>c :%w !pbcopy<CR>
 
 " Add cpp template
-autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+if !empty(glob('~/.vim/templates/skeleton.cpp'))
+    autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+endif
+
+if exists('*strftime')
+    au BufNewFile *.cpp :call append(0, '/**')
+    au BufNewFile *.cpp :call append(1, ' *    author:  yixxas')
+    au BufNewFile *.cpp :call append(2, ' *    created: '.strftime('%d.%m.%Y %T'))
+    au BufNewFile *.cpp :call append(3, '**/')
+endif
 
 
 " Vim color file
