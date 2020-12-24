@@ -7,11 +7,14 @@ set smarttab
 set number
 set ruler
 set hidden
+set autoindent
 "
 inoremap jj <Esc>
 autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python3' shellescape(@%, 1)<CR>
 autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ -std=c++17 '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 nnoremap <Space>c :%w !pbcopy<CR>
+nnoremap mj <C-f>
+nnoremap mk <C-b>
 
 " Add cpp template
 if !empty(glob('~/.vim/templates/skeleton.cpp'))
