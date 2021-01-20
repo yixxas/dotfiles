@@ -3,8 +3,6 @@ shopt -s expand_aliases
 
 alias python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7 
 
-export PATH="/Users/limbangjin/miniconda3/bin":$PATH
-
 #change bash name
 export PS1="\W$: "
 
