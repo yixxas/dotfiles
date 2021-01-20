@@ -10,7 +10,7 @@ set hidden
 set autoindent
 "
 inoremap jj <Esc>
-autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python3' shellescape(@%, 1)<CR>
+autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python' shellescape(@%, 1)<CR>
 autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ -std=c++17 '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 nnoremap <Space>c :%w !pbcopy<CR>
 nnoremap mj <C-f>
@@ -28,6 +28,8 @@ if exists('*strftime')
     au BufNewFile *.cpp :call append(3, '**/')
 endif
 
+" To enable and sync alias with bashrc
+let $BASH_ENV = "~/.bash_profile"
 
 " Vim color file
 " Maintainer:	Lan Rogers <lan.rogers.book@gmail.com>
