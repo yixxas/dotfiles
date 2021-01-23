@@ -3,6 +3,8 @@ shopt -s expand_aliases
 
 alias python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7 
 
+alias rm='echo "Use trash-put instead."; false'
+
 #change bash name
 export PS1="\W$: "
 
