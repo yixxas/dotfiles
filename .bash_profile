@@ -2,6 +2,8 @@
 shopt -s expand_aliases
 
 alias python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7 
+#allow i-search in macos
+stty -ixon
 
 alias rm='echo "Use trash-put instead."; false'
 
