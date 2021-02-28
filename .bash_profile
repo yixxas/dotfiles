@@ -2,7 +2,9 @@
 shopt -s expand_aliases
 
 alias python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7
+#ls the last created file and cd into it
 alias lslast='ls -Utd */ | head -n1'
+alias cdlast='cd $(lslast)'
 #allow i-search in macos
 stty -ixon
 
