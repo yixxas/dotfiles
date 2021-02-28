@@ -1,7 +1,8 @@
 #expand alias to vim
 shopt -s expand_aliases
 
-alias python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7 
+alias python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7
+alias lslast='ls -Utd */ | head -n1'
 #allow i-search in macos
 stty -ixon
 
