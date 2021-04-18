@@ -22,4 +22,6 @@ bind -m vi-command -r k
 
 #bind jj to escape key in insert mode
 bind -m vi-insert '"jj":"\e"'
+bind -m vi-insert '"hh":"\e"'
+bind -m vi-insert '"ll":"\e"'
 
