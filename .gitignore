@@ -1,4 +1,6 @@
 *
+!templates
+!templates/*
 !.gitignore
 !.vimrc
 !.bash_profile
