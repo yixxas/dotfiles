@@ -11,8 +11,6 @@ set autoindent
 "
 inoremap jj <Esc>
 inoremap kk <Esc>
-inoremap ll <Esc>
-inoremap hh <Esc>
 
 autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python' shellescape(@%, 1)<CR>
 autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ -std=c++17 '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>

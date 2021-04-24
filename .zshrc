@@ -16,5 +16,3 @@ bindkey '^S' history-incremental-search-forward
 
 # bind keys to escape key in insert mode
 bindkey -M viins 'jj' vi-cmd-mode
-bindkey -M viins 'hh' vi-cmd-mode
-bindkey -M viins 'll' vi-cmd-mode
