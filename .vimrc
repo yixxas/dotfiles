@@ -19,8 +19,11 @@ nnoremap mj <C-f>
 nnoremap mk <C-b>
 
 " Add cpp template
+" I am terrible at regex
 if !empty(glob('~/.vim/templates/skeleton.cpp'))
     autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+    autocmd BufNewFile LC*.cpp %delete
+    autocmd BufNewFile LC*.cpp 0r ~/.vim/templates/skeleton_lc.cpp
 endif
 
 if exists('*strftime')
