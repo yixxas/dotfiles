@@ -29,9 +29,9 @@ if exists('*strftime')
     autocmd BufNewFile *.cpp :call append(1, ' *    author:  yixxas')
     autocmd BufNewFile *.cpp :call append(2, ' *    created: '.strftime('%d.%m.%Y %T'))
     autocmd BufNewFile *.cpp :call append(3, '**/')
-    autocmd BufNewFile LC*.cpp %delete
+    autocmd BufNewFile lc*.cpp %delete
     if !empty(glob('~/.vim/templates/skeleton_lc.cpp'))
-        autocmd BufNewFile LC*.cpp 0r ~/.vim/templates/skeleton_lc.cpp
+        autocmd BufNewFile lc*.cpp 0r ~/.vim/templates/skeleton_lc.cpp
     endif
 endif
 
