@@ -22,15 +22,17 @@ nnoremap mk <C-b>
 " I am terrible at regex
 if !empty(glob('~/.vim/templates/skeleton.cpp'))
     autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
-    autocmd BufNewFile LC*.cpp %delete
-    autocmd BufNewFile LC*.cpp 0r ~/.vim/templates/skeleton_lc.cpp
 endif
 
 if exists('*strftime')
-    au BufNewFile *.cpp :call append(0, '/**')
-    au BufNewFile *.cpp :call append(1, ' *    author:  yixxas')
-    au BufNewFile *.cpp :call append(2, ' *    created: '.strftime('%d.%m.%Y %T'))
-    au BufNewFile *.cpp :call append(3, '**/')
+    autocmd BufNewFile *.cpp :call append(0, '/**')
+    autocmd BufNewFile *.cpp :call append(1, ' *    author:  yixxas')
+    autocmd BufNewFile *.cpp :call append(2, ' *    created: '.strftime('%d.%m.%Y %T'))
+    autocmd BufNewFile *.cpp :call append(3, '**/')
+    autocmd BufNewFile LC*.cpp %delete
+    if !empty(glob('~/.vim/templates/skeleton_lc.cpp'))
+        autocmd BufNewFile LC*.cpp 0r ~/.vim/templates/skeleton_lc.cpp
+    endif
 endif
 
 " To enable and sync alias with bashrc
