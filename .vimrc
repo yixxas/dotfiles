@@ -1,5 +1,7 @@
 " Vim config
 syntax on
+" Use new regular expression engine
+set re=0
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -43,8 +45,6 @@ let $BASH_ENV = "~/.bash_profile"
 " Last Change:	2011 May 30
 
 " First remove all existing highlighting.
-hi clear
-
 let colors_name = "IDLE"
 
 hi Normal guifg=Black guibg=white
@@ -95,4 +95,3 @@ if exists("syntax_on")
 endif
 
 " vim: sw=2
-
