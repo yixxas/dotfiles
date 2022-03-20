@@ -8,3 +8,5 @@ Requirements: tmux -V >= 1.9
 3) vim ~/.tmux.conf  
 4) hit prefix + I to fetch plugin and source it  
 
+## Vim8 native plugin manager
+1) git clone any plugins into $HOME/.vim/pack/plugins/start/ (eager loading) or $HOME/.vim/pack/plugins/opt/ (lazy loading)
