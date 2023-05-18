@@ -14,11 +14,14 @@ set autoindent
 inoremap jj <Esc>
 inoremap kk <Esc>
 
-autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python' shellescape(@%, 1)<CR>
+autocmd Filetype python nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;python3.9' shellescape(@%, 1)<CR>
 autocmd Filetype cpp nnoremap <buffer> <Space><Space> :w<CR>:exec '!clear;g++ -std=c++17 '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 nnoremap <Space>c :%w !pbcopy<CR>
 nnoremap mj <C-f>
 nnoremap mk <C-b>
+
+" Temp use java syntax for certora.spec files
+au BufReadPost *.spec set syntax=java 
 
 " Add cpp template
 " I am terrible at regex
