@@ -10,3 +10,7 @@ Requirements: tmux -V >= 1.9
 
 ## Vim8 native plugin manager
 1) git clone any plugins into $HOME/.vim/pack/plugins/start/ (eager loading) or $HOME/.vim/pack/plugins/opt/ (lazy loading)
+
+## Certora language syntax
+
+https://git.m-chrzan.xyz/certora-vim/
